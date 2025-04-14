@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./links/index.css">
+    <title>18-19-20-aprel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <div class="main-text-center">
+                <div class="main-text">
+                    <span class="main-text-span2">Jonli dars / 18-19-20-aprel</span>
+                </div>
+            </div>
+            <p class="main-text-p">Mirzoulug'bek Yusupovdan Bepul dars</p>
+            <div class="main-text-h1">
+                <h1>Muhim Xabar! Bu 3 ta usulni ishlatmasdan ingliz tilini 10 marta tezroq o'rgana olmaysiz.</h1>
+            </div>
+            <div class="mobile-img">
+                <img src="./img/main-img.png" alt="" class="first-main-img">
+            </div>
+            <div class="mobile-text">
+                <button class="show-button">RO'YXATDAN O'TISH</button>
+                <p class="mobile-text-p">BEPUL</p>
+            </div>
+            <div class="main-text-list">
+                <p>Jonli darsda:</p>
+                <ul>
+                    <li><img src="./img/imgs.webp" alt="">Ingliz tilida so'zlarni tezroq eslab qolish va umuman unutib qo'ymaslikning 3 ta qadami</li>
+                    <li><img src="./img/imgs.webp" alt="">5 ta qadam orqali ingliz tilini 10x tezroq o'rganib yuqori natija qilishni</li>
+                    <li><img src="./img/imgs.webp" alt="">Ingliz tilida ravon va xatosiz gapirish qadamlarini o'rganasiz</li>
+                </ul>
+            </div>
+            <div id="mobile-text">
+                <p class="mobile-text-p">BEPUL</p>
+                <button class="show-button">RO'YXATDAN O'TISH</button>
+            </div>
+            <div class="main-button">
+                <button class="img-button">RO'YXATDAN O'TISH</button>
+            </div>
+        </div>
+
+        <div class="desktop-img">
+            <img src="./img/main-img.png" alt="" class="first-main-img">
+        </div>
+
+        <!-- form -->
+        <div class="form">
+            <button class="f-button"><i class="fa-solid fa-xmark"></i></button>
+            <div class="form-container">
+                <div class="form-h1">
+                    <h1>Davom etish uchun quyidagi formani to'ldiring.</h1>
+                </div>
+                <form id="form" name="contact-form" novalidate>
+                    <div class="hide-form-div">
+                        <label for="name">Ismingizni kiriting:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="phone">Telefon raqamingiz:</label>
+                        <div class="phone-input">
+                            <img id="flag" src="./img/flags/uz.png" alt="Bayroq">
+                            <select id="country" onchange="updateFlag()">
+                                <option value="UZ" data-maxlength="12">
+                                    (+998) O'zbekistan
+                                </option>
+                                <option value="KRZ" data-maxlength="11">
+                                    (+996) Qirg'iziston
+                                </option>
+                                <option value="TJK" data-maxlength="11">
+                                    (+992) Tojikiston
+                                </option>
+                                <option value="TK"  data-maxlength="11">
+                                    (+993) Turkmaniston
+                                </option>
+                                <option value="KZ" data-maxlength="12">
+                                    (+7) Qozogʻiston
+                                </option>
+                                <option value="RU" data-maxlength="13">
+                                    (+7) Rossiya
+                                </option>
+                                <option value="GER" data-maxlength="12">
+                                    (+49) Germaniya
+                                </option>
+                                <option value="TUR" data-maxlength="11">
+                                    (+90) Turkiya
+                                </option>
+                                <option value="BEL" data-maxlength="12">
+                                    (+375) Belarussiya
+                                </option>
+                                <option value="UKI" data-maxlength="12">
+                                    (+380) Ukraina
+                                </option>
+                                <option value="US" data-maxlength="12">
+                                    (+1) AQSH
+                                </option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" placeholder="99-999-99-99"
+                                pattern="\d{2}-\d{3}-\d{2}-\d{2}" maxlength="12">
+                        </div>
+                        <p class="warning-p">❌ Telefon raqam mos emas!</p>
+                        <button type="submit" class="submit-button">DAVOM ETISH</button>
+                    </div>
+                </form>
+                <div class="show-form-div" id="loadingDiv">
+                    <p>Kuting, keyingi sahifa ochilmoqda<span class="dots"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-text">
+            <span class="D-name">Mirzoulug'bek Yusupov</span>
+            <br>
+            <ul>
+                <li>This site or product is not part of or endorsed by Facebook, Google, or any social media platform in
+                    any way FACEBOOK is a trademark of META PLATFORMS, Inc. YOUTUBE and GOOGLE are trademarks of
+                    ALPHABET, Inc.</li>
+            </ul>
+            <p>Barcha huquqlar himoyalangan, 2025.</p>
+        </div>
+    </div>
+
+    <script src="./links/index.js"></script>
+</body>
+
+</html>
