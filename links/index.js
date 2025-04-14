@@ -204,8 +204,8 @@ updateFlag();
 
 
 // Formani yuborish uchun Google Sheets linki
-const scriptURL = "https://script.google.com/macros/s/AKfycbwB40n-KSXKKD3PjmPcJNrOgruMP-4OU11NSJO_JBeaETmRMLsPgDJpylrWguq6H7oN/exec"; // google sheets link
-const submitForm = document.forms['contact-form'];
+const scriptURL = "https://script.google.com/macros/s/AKfycbwt2aHUVzCErF6jx7i3GGnZqJLX20kHa1Z1gPMMApyGCaYkXtmUpFEn8fA71I3Fekd32Q/exec"; // google sheets link
+const forme = document.forms['contact-form'];
 const buttonS = document.querySelector('.submit-button');
 const showForm = document.querySelector('.show-form-div');
 const hideForm = document.querySelector('.hide-form-div');
@@ -214,29 +214,28 @@ const inputPhone = document.getElementById('phone');
 const nameError = document.createElement('p');
 const warningP = document.querySelector('.warning-p');
 
+
 // submit funksiyasi
-submitForm.addEventListener('submit', (e) => {
+forme.addEventListener('submit', e => {
   e.preventDefault();
 
   if (!validateName() || !validatePhone()) {
     return;
   }
 
-  let name = inputName.value.trim();
-  let phone = inputPhone.value.trim();
+  const formData = new FormData(forme);
+  warningP.textContent = "Yuborilmoqda...";
 
-  // Sahifani kutmasdan o‘zgartiramiz
-  window.location.assign("./thank-you.html");
-
-  // Fetch'ni fon rejimida ishga tushuramiz
   fetch(scriptURL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name, phone }),
-    mode: 'no-cors'
-  }).catch((error) => {
-    console.error("Yuborishda xatolik:", error);
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
   });
+
+  // 1.5 soniya ichida o‘tkazamiz (brauzer fetchni orqa fonda bajaradi)
+  setTimeout(() => {
+      window.location.assign("./thank-you.html");
+  }, 1000);
 });
 
 
