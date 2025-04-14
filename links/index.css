@@ -170,14 +170,12 @@ input[type="text"]:focus {
         display: none;
     }
     .mobile-text {
-        position: relative;
-        bottom: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         border-radius: 20px;
-        padding: 30px 10px 0px 10px;
+        margin-bottom: 10px;
     }
     #mobile-text {
         display: flex;
@@ -240,7 +238,7 @@ input[type="text"]:focus {
         outline: none;
         border-radius: 20px;
         box-shadow: 0 5px 0 #770d0e;
-        padding: 25px 50px;
+        padding: 25px 65px;
         border: 1px solid #ffffff5d;
     }
     .desktop-img {
