@@ -252,10 +252,10 @@ showForm.style.display = "none";
 // Ismni tekshirish
 function validateName() {
   const nameValue = inputName.value.trim();
-  const nameRegex = /^[A-Za-zÀ-ÿ' -]{2,}$/; // Harflar, apostrof, defis va bo‘shliq ruxsat etiladi
+  const nameRegex = /^[A-Za-zÀ-ÿА-Яа-яЁё' -]{2,}$/; // Harflar, apostrof, defis va bo‘shliq ruxsat etiladi
 
   if (!nameRegex.test(nameValue)) {
-    nameError.textContent = "❌ Ism faqat harflardan iborat bo‘lishi va kamida 2 ta harf bo‘lishi kerak!";
+    nameError.textContent = "❌ Xatolik: noto‘g‘ri format";
     inputName.style.borderColor = "red";
     return false;
   } else {
