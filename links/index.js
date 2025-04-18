@@ -232,7 +232,7 @@ forme.addEventListener('submit', e => {
       mode: 'no-cors'
   });
 
-  // 1.5 soniya ichida o‘tkazamiz (brauzer fetchni orqa fonda bajaradi)
+  // 1 soniya ichida o‘tkazamiz (brauzer fetchni orqa fonda bajaradi)
   setTimeout(() => {
       window.location.assign("./thank-you.html");
   }, 1000);
