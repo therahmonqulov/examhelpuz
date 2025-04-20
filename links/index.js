@@ -227,15 +227,16 @@ forme.addEventListener('submit', e => {
   warningP.textContent = "Yuborilmoqda...";
 
   fetch(scriptURL, {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors'
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
   });
 
-  // Darhol sahifani boshqa sahifaga yo'naltiramiz
-  window.location.assign("./thank-you.html");
+  // 1 soniya ichida o‘tkazamiz (brauzer fetchni orqa fonda bajaradi)
+  setTimeout(() => {
+      window.location.assign("./thank-you.html");
+  }, 0);
 });
-
 
 
 // Xatolik xabarini yaratish
